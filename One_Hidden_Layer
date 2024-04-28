@@ -68,17 +68,7 @@ class NeuralNetwork:
         A2, Z2, A1, Z1 = self.forward_pass(X)
         return A2
     
-    # def accuracy(self,y, y_pred):
-    #     y = y.cpu().numpy()
-    #     y_pred = y_pred.cpu().numpy()
-    #     #y_pred = torch.tensor(A2)
-    #     pred = torch.zeros_like(y_pred)
-    #     L_max = torch.max(y_pred, axis=0)
 
-    #     for i in range(y.shape[1]):
-    #         pred[:,i] = (L_max[i] == y_pred[:,i]).astype(int)
-    #     acc = torch.mean((y == pred).astype(int))*100
-    #     return acc
     def accuracy(self, y, y_pred):
         pred = torch.zeros_like(y_pred)
         L_max, _ = torch.max(y_pred, dim=0)
@@ -123,11 +113,11 @@ class NeuralNetwork:
         plt.show()
 
         train_accuracy = self.accuracy(Y_train, A2 )
-        print(f"train accuracy: {train_accuracy:.2f}%")
+        print(f"Train accuracy: {train_accuracy:.2f}%")
 
         y_pred = self.predict(X_test)
         test_accuracy = self.accuracy(Y_test, y_pred)
-        print (f"test accuracy : {test_accuracy:.2f}%")
+        print (f"Test accuracy : {test_accuracy:.2f}%")
 
 
     
