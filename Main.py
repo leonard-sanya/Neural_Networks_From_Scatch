@@ -1,18 +1,18 @@
-import numpy as np # type: ignore
-import matplotlib.pyplot as plt # type: ignore
-import torch # type: ignore
-import torch.nn as nn # type: ignore
-from torch.nn import functional as F # type: ignore
+import numpy as np 
+import matplotlib.pyplot as plt 
+import torch 
+import torch.nn as nn 
+from torch.nn import functional as F 
 from random import shuffle
-from torchvision import datasets, transforms # type: ignore
+from torchvision import datasets, transforms 
 import pandas as pd # type: ignore
-from sklearn.metrics import confusion_matrix # type: ignore
-from sklearn.model_selection import train_test_split # type: ignore
+from sklearn.metrics import confusion_matrix
+from sklearn.model_selection import train_test_split 
 
 device = torch.device('mps')
 import time
-from sklearn.preprocessing import OneHotEncoder # type: ignore
-from sklearn.metrics import accuracy_score # type: ignore
+from sklearn.preprocessing import OneHotEncoder 
+from sklearn.metrics import accuracy_score 
 from MNIST_NN_1_HL import NeuralNetwork
 
 transform = transforms.Compose([transforms.ToTensor(),])
