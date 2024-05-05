@@ -1,7 +1,7 @@
-import torch # type: ignore
-import torch.nn as nn # type: ignore
-import torch.nn.functional as F # type: ignore
-import matplotlib.pyplot as plt # type: ignore
+import torch 
+import torch.nn as nn 
+import torch.nn.functional as F 
+import matplotlib.pyplot as plt 
 device = torch.device("mps")
 
 class NeuralNetwork:
